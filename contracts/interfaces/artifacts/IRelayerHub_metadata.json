@@ -1,0 +1,60 @@
+{
+	"compiler": {
+		"version": "0.6.4+commit.1dca32f3"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					}
+				],
+				"name": "isRelayer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IRelayerHub.sol": "IRelayerHub"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IRelayerHub.sol": {
+			"keccak256": "0x52c578c2d27686e475590b807b522c7f23dcd941fb8e0320f02ad28438dca417",
+			"urls": [
+				"bzz-raw://9885060b68f4b0caeceffc3a0dbe005048b13406b32b22866404c89dad5c216c",
+				"dweb:/ipfs/QmUGwuLfZYLHdFP9v6u6pA9Ts5ErDZjsNBdJggXjZmXfmt"
+			]
+		}
+	},
+	"version": 1
+}

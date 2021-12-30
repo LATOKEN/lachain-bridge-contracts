@@ -1,0 +1,148 @@
+{
+	"compiler": {
+		"version": "0.6.4+commit.1dca32f3"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "fundERC20",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"fundERC20(address,address,uint256)": {
+					"params": {
+						"amount": "Amount of tokens to transfer.",
+						"owner": "Address of current token owner.",
+						"tokenAddress": "Address of ERC20 to transfer."
+					}
+				}
+			},
+			"title": "Manages deposited ERC20s."
+		},
+		"userdoc": {
+			"methods": {
+				"fundERC20(address,address,uint256)": {
+					"notice": "Used to transfer tokens into the safe to fund proposals."
+				}
+			},
+			"notice": "This contract is intended to be used with ERC20Handler contract."
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ERC20Safe.sol": "ERC20Safe"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ERC20Safe.sol": {
+			"keccak256": "0x4ecf9b1fac8dcc080000864035c6b78ec9e2cb08fd2efbafa964826db2e670e6",
+			"urls": [
+				"bzz-raw://d245ee4f31a66a65f9a25dbd25c346bcf32cb9054fb14e5ade4ba9bf34051a86",
+				"dweb:/ipfs/QmXaknE8uYG12LbcgdQo4nf9zZ5EAQcKJSYHA4Kan6ESEr"
+			]
+		},
+		"contracts/ExampleToken.sol": {
+			"keccak256": "0x081f6116baa037a68d130456c4b719b64c2c6ee35aed3154760ed5972595554b",
+			"urls": [
+				"bzz-raw://5bb28337d05a5d637eee57b9d8579a79b7e249067df32daed5669ca5952e0d14",
+				"dweb:/ipfs/QmVdcvXH3PJVXJs7bJnHPhRvKBB1UWn5xJdPFtRuvzqJNr"
+			]
+		},
+		"contracts/interfaces/IERC20.sol": {
+			"keccak256": "0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5",
+			"urls": [
+				"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08",
+				"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC"
+			]
+		},
+		"contracts/libraries/EnumerableSet.sol": {
+			"keccak256": "0x1562cd9922fbf739edfb979f506809e2743789cbde3177515542161c3d04b164",
+			"urls": [
+				"bzz-raw://4580d57781513d98870d9738c7d39094336e0a70cdb90d68dad549c6ced466ec",
+				"dweb:/ipfs/Qmf9YZzzRFuvMnav9dgmeRUpdYMMECiZX8w25sHWVbA18V"
+			]
+		},
+		"contracts/libraries/SafeMath.sol": {
+			"keccak256": "0xcc78a17dd88fa5a2edc60c8489e2f405c0913b377216a5b26b35656b2d0dab52",
+			"urls": [
+				"bzz-raw://526dc85e1f9b9b45830e202568d267d93dde7a4fcccf4ad7798dadcd92304d3c",
+				"dweb:/ipfs/QmaoXMB972J3cSDLtBq3xBo4jLwqD2uzXTwujtSPqkYVhR"
+			]
+		},
+		"contracts/utils/AccessControl.sol": {
+			"keccak256": "0xa0572dc2944e579e25cffa7a4cddded2fd12fe7f8305f7fa6636e9b32571e566",
+			"urls": [
+				"bzz-raw://45698eab3b8a3aa04957684af8c81f4b6bad04feb1d380751d7bfd8cab21daa7",
+				"dweb:/ipfs/QmeABUQo75ufnLwvFm9eQLnHDUeV8UtzMsShRZr2eAcrtR"
+			]
+		},
+		"contracts/utils/Context.sol": {
+			"keccak256": "0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0",
+			"urls": [
+				"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f",
+				"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96"
+			]
+		},
+		"contracts/utils/ERC20.sol": {
+			"keccak256": "0xbccf96127c14c8e5ce632abb78d22da4acc51408761f945e0fc8acbe498dc958",
+			"urls": [
+				"bzz-raw://e188316994802ceb31576b0e44d2bad3ba8652025e20395cdeefac373c6875d9",
+				"dweb:/ipfs/Qmabmk9dH1Yi4rze2CntVkrYWgyEEAJKSBBb4c1QHo1yMT"
+			]
+		},
+		"contracts/utils/ERC20Burnable.sol": {
+			"keccak256": "0x60b0547de2cd757b179484bb06c92be19e649e4db1f4c50095b9f1a102ceac86",
+			"urls": [
+				"bzz-raw://781f93e1c6965f18816f34b4061166dec0d51e8a668ff9838c6bfd7a97bbc2bb",
+				"dweb:/ipfs/QmQU1nKx9cpE34YFT6t3sPSBdDWJtNi64woWuParGiB6Wj"
+			]
+		},
+		"contracts/utils/ERC20Pausable.sol": {
+			"keccak256": "0x339ce3f09ac3fc5890766cbdc5051e7ba3199d46fececcecc43d7ca4f4ddc9d0",
+			"urls": [
+				"bzz-raw://991c82b502ea946323d1502320b4fe5281108cb19f4d617b7840520cdadd3919",
+				"dweb:/ipfs/QmUUXaQDQmJkCuFd6dZnMt12mFfJFynHr4kh259RbdydS9"
+			]
+		},
+		"contracts/utils/Pausable.sol": {
+			"keccak256": "0xada058b6900a4aebcac6382e52836d6b142eacaf73367d6e6dec57e44ddb78da",
+			"urls": [
+				"bzz-raw://c4dd73bd95f746d930cf808f218659f0822ab266fa380386485286586efe52cd",
+				"dweb:/ipfs/QmakkvF9N9gX3ESgAH5XWfG6wnm8QRycJLFiiAMjF4QBxh"
+			]
+		}
+	},
+	"version": 1
+}

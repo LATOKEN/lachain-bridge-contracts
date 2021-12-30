@@ -1,0 +1,664 @@
+{
+	"compiler": {
+		"version": "0.6.4+commit.1dca32f3"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "bridgeAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "initialResourceIDs",
+						"type": "bytes32[]"
+					},
+					{
+						"internalType": "address[]",
+						"name": "initialContractAddresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address[]",
+						"name": "burnableContractAddresses",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "_bridgeAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "_burnList",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "_contractWhitelist",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint64",
+						"name": "",
+						"type": "uint64"
+					}
+				],
+				"name": "_depositRecords",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_lenDestinationRecipientAddress",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_destinationChainID",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_resourceID",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_destinationRecipientAddress",
+						"type": "bytes"
+					},
+					{
+						"internalType": "address",
+						"name": "_depositer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_metaData",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "_resourceIDToTokenContractAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "_tokenContractAddressToResourceID",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "resourceID",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint8",
+						"name": "destinationChainID",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint64",
+						"name": "depositNonce",
+						"type": "uint64"
+					},
+					{
+						"internalType": "address",
+						"name": "depositer",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "resourceID",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "executeProposal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenID",
+						"type": "uint256"
+					}
+				],
+				"name": "fundERC721",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint64",
+						"name": "depositNonce",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint8",
+						"name": "destId",
+						"type": "uint8"
+					}
+				],
+				"name": "getDepositRecord",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "_tokenAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint8",
+								"name": "_lenDestinationRecipientAddress",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "_destinationChainID",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "_resourceID",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bytes",
+								"name": "_destinationRecipientAddress",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "_depositer",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "_tokenID",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "_metaData",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct ERC721Handler.DepositRecord",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "setBurnable",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "resourceID",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "setResource",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenID",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "ChainSafe Systems.",
+			"methods": {
+				"constructor": {
+					"details": "{initialResourceIDs} and {initialContractAddresses} must have the same length (one resourceID for every address). Also, these arrays must be ordered in the way that {initialResourceIDs}[0] is the intended resourceID for {initialContractAddresses}[0].",
+					"params": {
+						"bridgeAddress": "Contract address of previously deployed Bridge.",
+						"burnableContractAddresses": "These addresses will be set as burnable and when {deposit} is called, the deposited token will be burned. When {executeProposal} is called, new tokens will be minted.",
+						"initialContractAddresses": "These are the addresses the {initialResourceIDs} will point to, and are the contracts that will be called to perform various deposit calls.",
+						"initialResourceIDs": "Resource IDs are used to identify a specific contract address. These are the Resource IDs this contract will initially support."
+					}
+				},
+				"deposit(bytes32,uint8,uint64,address,bytes)": {
+					"details": "Depending if the corresponding {tokenAddress} for the parsed {resourceID} is marked true in {_burnList}, deposited tokens will be burned, if not, they will be locked.",
+					"params": {
+						"data": "Consists of: {resourceID}, {tokenID}, {lenDestinationRecipientAddress}, and {destinationRecipientAddress} all padded to 32 bytes.",
+						"depositNonce": "This value is generated as an ID by the Bridge contract.",
+						"depositer": "Address of account making the deposit in the Bridge contract.",
+						"destinationChainID": "Chain ID of chain token is expected to be bridged to."
+					}
+				},
+				"executeProposal(bytes32,bytes)": {
+					"params": {
+						"data": "Consists of {tokenID}, {resourceID}, {lenDestinationRecipientAddress}, {destinationRecipientAddress}, {lenMeta}, and {metaData} all padded to 32 bytes."
+					}
+				},
+				"fundERC721(address,address,uint256)": {
+					"params": {
+						"owner": "Address of current token owner.",
+						"tokenAddress": "Address of ERC721 to transfer.",
+						"tokenID": "ID of token to transfer."
+					}
+				},
+				"getDepositRecord(uint64,uint8)": {
+					"params": {
+						"depositNonce": "This ID will have been generated by the Bridge contract.",
+						"destId": "ID of chain deposit will be bridged to."
+					},
+					"returns": {
+						"_0": "DepositRecord which consists of: - _tokenAddress Address used when {deposit} was executed. - _destinationChainID ChainID deposited tokens are intended to end up on. - _resourceID ResourceID used when {deposit} was executed. - _lenDestinationRecipientAddress Used to parse recipient's address from {_destinationRecipientAddress} - _destinationRecipientAddress Address tokens are intended to be deposited to on desitnation chain. - _depositer Address that initially called {deposit} in the Bridge contract. - _tokenID ID of ERC721. - _metaData Optional ERC721 metadata."
+					}
+				},
+				"setBurnable(address)": {
+					"params": {
+						"contractAddress": "Address of contract to be used when making or executing deposits."
+					}
+				},
+				"setResource(bytes32,address)": {
+					"params": {
+						"contractAddress": "Address of contract to be called when a deposit is made and a deposited is executed.",
+						"resourceID": "ResourceID to be used when making deposits."
+					}
+				},
+				"withdraw(address,address,uint256)": {
+					"params": {
+						"recipient": "Address to release token to.",
+						"tokenAddress": "Address of token contract to release.",
+						"tokenID": "The ERC721 token ID to release."
+					}
+				}
+			},
+			"title": "Handles ERC721 deposits and deposit executions."
+		},
+		"userdoc": {
+			"methods": {
+				"deposit(bytes32,uint8,uint64,address,bytes)": {
+					"notice": "A deposit is initiatied by making a deposit in the Bridge contract.Data passed into the function should be constructed as follows: tokenID                                     uint256    bytes    0  - 32 destinationRecipientAddress     length      uint256    bytes    32 - 64 destinationRecipientAddress                   bytes    bytes    64 - (64 + len(destinationRecipientAddress))If the corresponding {tokenAddress} for the parsed {resourceID} supports {_INTERFACE_ERC721_METADATA}, then {metaData} will be set according to the {tokenURI} method in the token contract."
+				},
+				"executeProposal(bytes32,bytes)": {
+					"notice": "Proposal execution should be initiated when a proposal is finalized in the Bridge contract. by a relayer on the deposit's destination chain.Data passed into the function should be constructed as follows: tokenID                                     uint256    bytes    0  - 32 destinationRecipientAddress     length      uint256    bytes    32 - 64 destinationRecipientAddress                   bytes    bytes    64 - (64 + len(destinationRecipientAddress)) metadata                        length      uint256    bytes    (64 + len(destinationRecipientAddress)) - (64 + len(destinationRecipientAddress) + 32) metadata                                      bytes    bytes    (64 + len(destinationRecipientAddress) + 32) - END"
+				},
+				"fundERC721(address,address,uint256)": {
+					"notice": "Used to transfer tokens into the safe to fund proposals."
+				},
+				"setBurnable(address)": {
+					"notice": "First verifies {contractAddress} is whitelisted, then sets {_burnList}[{contractAddress}] to true."
+				},
+				"setResource(bytes32,address)": {
+					"notice": "First verifies {_resourceIDToContractAddress}[{resourceID}] and {_contractAddressToResourceID}[{contractAddress}] are not already set, then sets {_resourceIDToContractAddress} with {contractAddress}, {_contractAddressToResourceID} with {resourceID}, and {_contractWhitelist} to true for {contractAddress}."
+				},
+				"withdraw(address,address,uint256)": {
+					"notice": "Used to manually release ERC721 tokens from ERC721Safe."
+				}
+			},
+			"notice": "This contract is intended to be used with the Bridge contract."
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/handlers/ERC721Handler.sol": "ERC721Handler"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/GSN/Context.sol": {
+			"keccak256": "0x9486045e189facd2e868ece35249872598ef03f1087fb6fa4d1161842daa2287",
+			"urls": [
+				"bzz-raw://77c3a04ef8453788b14b1ebbc24dd3f0a18ceb2615cd156aac949a611e552af8",
+				"dweb:/ipfs/QmcmqWGguRM3iLuF57tcyrN3F6EA63kzeNkDfQuteBnurr"
+			]
+		},
+		"@openzeppelin/contracts/access/AccessControl.sol": {
+			"keccak256": "0x4fc155a2f7837603d69a13cfa481eb5e7f5e02cb77e2ec9edbac30986db37988",
+			"urls": [
+				"bzz-raw://0855147e38b5e36288a8df73b8da49132f14ec7abb19041b0c98872263643aaa",
+				"dweb:/ipfs/QmSrSysyFUYQq7hbJaJXG7EyZW6ezDBzEJx3SABp6eiJSS"
+			]
+		},
+		"@openzeppelin/contracts/introspection/ERC165.sol": {
+			"keccak256": "0x24141d2f6b98d4cb77a8936eae8cbaad2e261d9062bdc08036096f4550092501",
+			"urls": [
+				"bzz-raw://b710eb003944777135f027500a5a57b479fe857849f5f467c1ef9687401e3c95",
+				"dweb:/ipfs/QmcELzi6KRzAs3DXwxdsoKWRJ13KSeipKQsJgD3unctdZM"
+			]
+		},
+		"@openzeppelin/contracts/introspection/ERC165Checker.sol": {
+			"keccak256": "0x1bdefceaba99e08a6c30400bc686e6380c1e914887bf5780db14f965c09aa9d3",
+			"urls": [
+				"bzz-raw://fa31e8df5c7a5f3434977d3a881ee322c4e81f8486aec4bb859bebd20f23d805",
+				"dweb:/ipfs/QmShFfnjPytP2ooLtDj7f2XULXgbsRj4xjrFc9qm9kRe79"
+			]
+		},
+		"@openzeppelin/contracts/introspection/IERC165.sol": {
+			"keccak256": "0xf70bc25d981e4ec9673a995ad2995d5d493ea188d3d8f388bba9c227ce09fb82",
+			"urls": [
+				"bzz-raw://bd970f51e3a77790c2f02b5b1759827c3b897c3d98c407b3631e8af32e3dc93c",
+				"dweb:/ipfs/QmPF85Amgbqjk3SNZKsPCsqCw8JfwYEPMnnhvMJUyX58je"
+			]
+		},
+		"@openzeppelin/contracts/math/SafeMath.sol": {
+			"keccak256": "0xcc78a17dd88fa5a2edc60c8489e2f405c0913b377216a5b26b35656b2d0dab52",
+			"urls": [
+				"bzz-raw://526dc85e1f9b9b45830e202568d267d93dde7a4fcccf4ad7798dadcd92304d3c",
+				"dweb:/ipfs/QmaoXMB972J3cSDLtBq3xBo4jLwqD2uzXTwujtSPqkYVhR"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/ERC721.sol": {
+			"keccak256": "0x118ed7540f56b21ff92e21ebaa73584048e98d2ac04ca67571329bb8dbd9032f",
+			"urls": [
+				"bzz-raw://da2918b7aff73dd51d41bfcfa548f81eb50531b8353500fdbdacf297076db070",
+				"dweb:/ipfs/Qmb8ixAs1vBjZRowQNuNg6bRf2NZmgZ1JTBxmQS14PHpcL"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/ERC721Burnable.sol": {
+			"keccak256": "0x060925a04766df64ac29f56aaa3a38aafd71424ba4d996ca0f14363828b97056",
+			"urls": [
+				"bzz-raw://8593f0fcac22c97956ab3e779e8a55a6c33dd01059fa01f15992518e708f4e6f",
+				"dweb:/ipfs/QmWYQcAy7R6v5prSfmigmrhr7nGxwzkbZkmdeMcLNLUG66"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/ERC721Pausable.sol": {
+			"keccak256": "0x1c31a4c2ad1af9e25cd8f4ea941ebd6a6a932426183ab39c160cb8e51cfc704f",
+			"urls": [
+				"bzz-raw://77dd2448bbeb4a8f6f3273042d02326fa6ba191827e5b37f6f68492b17d022c9",
+				"dweb:/ipfs/QmRiAmuxtRcVRhXUymziiTD3r8SGcjxKN95ZLVKd2jtWjN"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0x2d99a0deb6648c34fbc66d6ac4a2d64798d7a5321b45624f6736fadc63da1962",
+			"urls": [
+				"bzz-raw://2dcdce5ede1e5e650d174ec0b35be7d47b6a50f30bc895ef0d9e59fb75052e45",
+				"dweb:/ipfs/QmQ2XFsDLTYqfEdw7pYzHiGtFRY11yQm4b6ynYgKqDxeB8"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol": {
+			"keccak256": "0xe6bd1b1218338b6f9fe17776f48623b4ac3d8a40405f74a44bc23c00abe2ca13",
+			"urls": [
+				"bzz-raw://0c354c3f6e9c487759aa7869be4fba68e0b2efc777b514d289c4cbd3ff8f7e1a",
+				"dweb:/ipfs/QmdF9LcSYVmiUCL7JxLEYmSLrjga6zJsujfi6sgEJD4M1z"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol": {
+			"keccak256": "0xccb917776f826ac6b68bd5a15a5f711e3967848a52ba11e6104d9a4f593314a7",
+			"urls": [
+				"bzz-raw://430255ad2229ced6d880e61a67bdc6e48dbbaed8354a7c1fe918cd8b8714a886",
+				"dweb:/ipfs/QmTHY56odzqEpEC6v6tafaWMYY7vmULw25q5XHJLCCAeox"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+			"keccak256": "0x52146049d6709c870e8ddcd988b5155cb6c5d640cfcd8978aee52bc1ba2ec4eb",
+			"urls": [
+				"bzz-raw://ada84513617b7c1b2f890b44503735abaec73a1acd030112a17aac7e6c66a4a1",
+				"dweb:/ipfs/QmaiFwdio67iJrfjAdkMac24eJ5sS1qD7CZW6PhUU6KjiK"
+			]
+		},
+		"@openzeppelin/contracts/utils/Address.sol": {
+			"keccak256": "0x28911e614500ae7c607a432a709d35da25f3bc5ddc8bd12b278b66358070c0ea",
+			"urls": [
+				"bzz-raw://256c8c8af5eb072bc473226ab2b2187149b8fc04f5f4a4820db22527f5ce8e3c",
+				"dweb:/ipfs/QmRvi5BhnL7Rxf85KrJhwM6RRhukm4tzoctRdgQEheNyiN"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0",
+			"urls": [
+				"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f",
+				"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96"
+			]
+		},
+		"@openzeppelin/contracts/utils/Counters.sol": {
+			"keccak256": "0x21662e4254ce4ac8570b30cc7ab31435966b3cb778a56ba4d09276881cfb2437",
+			"urls": [
+				"bzz-raw://acce8fe6adc670f9987a8b6aedc4cc0abcd0dcd2e152d649a12099d735bd7bad",
+				"dweb:/ipfs/QmXAk17oK3daBmA8CGyVcU56L496jW3U6Ef1WkfHyB1JAV"
+			]
+		},
+		"@openzeppelin/contracts/utils/EnumerableMap.sol": {
+			"keccak256": "0x4b087f06b6670a131a5a14e53b1d2a5ef19c034cc5ec42eeebcf9554325744ad",
+			"urls": [
+				"bzz-raw://f6a6af5d848334e40db419773f6360601e311ffc21c2e274f730b8c542da99fd",
+				"dweb:/ipfs/QmfA24cxQ2g41ZWUuDF295dxDJ4xF1bSDYtC3EaLd7CzW8"
+			]
+		},
+		"@openzeppelin/contracts/utils/EnumerableSet.sol": {
+			"keccak256": "0x1562cd9922fbf739edfb979f506809e2743789cbde3177515542161c3d04b164",
+			"urls": [
+				"bzz-raw://4580d57781513d98870d9738c7d39094336e0a70cdb90d68dad549c6ced466ec",
+				"dweb:/ipfs/Qmf9YZzzRFuvMnav9dgmeRUpdYMMECiZX8w25sHWVbA18V"
+			]
+		},
+		"@openzeppelin/contracts/utils/Pausable.sol": {
+			"keccak256": "0x212fb1b1d4beaf74354dad9bc329f44ee3c5375ef1c32acff76b4ecefc10f1d8",
+			"urls": [
+				"bzz-raw://d21c68cb321d1c8d0fa39fd9ecb6bbe3b2f26623b0f38af280a010c916c85f23",
+				"dweb:/ipfs/Qmf2P51HRC4ekDHLYfbXu5SXR33gXrWtq6oKSmfyWqVRuC"
+			]
+		},
+		"@openzeppelin/contracts/utils/Strings.sol": {
+			"keccak256": "0xa1e12f97981f1d0964b1c048978606a57127c56c438bab61cdfe269cad859a74",
+			"urls": [
+				"bzz-raw://5eefac1760f524971e14aa3f3d79515a3d54fd28c1d3bdca0b36127da349b830",
+				"dweb:/ipfs/QmUMzkyH3ytJX5gVPizQruNLhkKmuJb3nFqBDad4LPdg5U"
+			]
+		},
+		"contracts/ERC721MinterBurnerPauser.sol": {
+			"keccak256": "0x4db2e2b03be0967d797b5a5dbd070b812df61d874b4d48c4e70abe551ceef05a",
+			"urls": [
+				"bzz-raw://ee81fd0088dcd744df83064e848a87d7fffa5ead506861f314e06d98f35fae1a",
+				"dweb:/ipfs/QmPmR75Bvb9Pebb5eiU4StbMm6kpoRmaU7t6XCn67BpGxc"
+			]
+		},
+		"contracts/ERC721Safe.sol": {
+			"keccak256": "0x53e8154fadd34ac0535e9fefd5a531c6fd39d53120dbb1c17849d8e6f88bb13b",
+			"urls": [
+				"bzz-raw://ed301d5a94b8b3f0faf240f27e64d414e5fcd9faac584a4ab7371bb3bf796e61",
+				"dweb:/ipfs/QmYJDwxMhM7JXMgSQA167kckYMK9KqNdLzgTFdaYjJatz1"
+			]
+		},
+		"contracts/handlers/ERC721Handler.sol": {
+			"keccak256": "0xf098bb91b191bd3a9894e0d27213b9140239151486ad3bcc6f069fc90f93e487",
+			"urls": [
+				"bzz-raw://9d104ab32d5f73706ceec434c27e19b39a4a8ec9dafb12cd7c372a0f34c69c61",
+				"dweb:/ipfs/QmeHtSzVw4dMF6Ng4roRh6kzf1kVBcYwtzJzYfVCQ88pkZ"
+			]
+		},
+		"contracts/handlers/HandlerHelpers.sol": {
+			"keccak256": "0x663f15ce7bcb74f717aa8eed4708540c6d59e51231e1218b495874a2c89e0097",
+			"urls": [
+				"bzz-raw://661893d064ecf05e472e7b76a8487e21f375d1c5918c36ad9aef75e8df6f3352",
+				"dweb:/ipfs/QmXEpxmSdXgd3tYHqqJD4XcEGnmU1bGZavYLa4tBxR7LVV"
+			]
+		},
+		"contracts/interfaces/IDepositExecute.sol": {
+			"keccak256": "0x0e294346387f78e5762ed8f30ef4ba23c577abc9e2dfbaeb29e97b1b5099aa35",
+			"urls": [
+				"bzz-raw://896aa03012baece6caca18cf66386717e1cd47e5700ea24f1a31589b3513d814",
+				"dweb:/ipfs/QmVJWiXZgEjFiZB21wsvkhHAUupNqBJ8FvZuJcB4X4NEvj"
+			]
+		},
+		"contracts/interfaces/IERCHandler.sol": {
+			"keccak256": "0x86538bf44b756628487de0eed8b13c8f8a8db6c131a72adb73074336105e0034",
+			"urls": [
+				"bzz-raw://39c44d3b60330ab51acf992a6da8b5fb43ba1b41ea2e80560242b24b362aeeed",
+				"dweb:/ipfs/QmeUMgQDNoS5QKAkodzF1gzS5jNpt5mGJMjNq8sMd5ZV2W"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.6.4+commit.1dca32f3"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address[]",
+						"name": "argumentOne",
+						"type": "address[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes4",
+						"name": "argumentTwo",
+						"type": "bytes4"
+					}
+				],
+				"name": "TwoArgumentsCalled",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "argumentOne",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "argumentTwo",
+						"type": "bytes4"
+					}
+				],
+				"name": "twoArguments",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/TestContracts.sol": "TwoArguments"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/TestContracts.sol": {
+			"keccak256": "0x4f17680f1a7de54e9760fec6718f9ed78e4198bda0d734468b21ed54e6a66e31",
+			"urls": [
+				"bzz-raw://8184b007a58646427ce5a55b33c24df6a1eaca59dadd25716d3ece94646325ec",
+				"dweb:/ipfs/QmQzFqpKFxYQCx9ETB96XsutEBAjazGCiaP9GqN9jwmqE5"
+			]
+		}
+	},
+	"version": 1
+}
